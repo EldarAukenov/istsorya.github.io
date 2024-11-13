@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(135deg, #4CAF50, #2e8b57); /* Green gradient */
+    color: #fff;
+    padding: 50px 0;  /* Adds more padding for a bigger, airier header */
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow to lift it */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle shadow to text */
+}
+
+header p {
+    font-size: 1.5em;
+    color: #f0f0f0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Add some animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1, header p {
+    animation: fadeIn 1s ease-out;
+}
+
+.button-column {
+	margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* расстояние между рядами кнопок */
+}
+
+.button-row {
+    display: flex;
+    gap: 170px; /* расстояние между кнопками */
+}
+
+.anchor-button-container {
+    text-align: center;
+    width: 500px; /* фиксированная ширина контейнера */
+    padding: 10px;
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anchor-button-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.button-photo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* расстояние между фото и кнопкой */
+    border-radius: 5px; /* слегка закругленные углы */
+}
+
+.anchor-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.anchor-button:hover {
+    background-color: #555;
+    border-color: #45a049;
+}
+
+.anchor-text, .anchor-video {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 20px;
+}
+
+.anchor-text p, .anchor-video video {
+    margin: 0;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.anchor-button-container.active .anchor-text {
+    max-height: 200px; /* Убедитесь, что это значение достаточно для вашего контента */
+}
+
+.anchor-button-container.active .anchor-video {
+    max-height: 500px; /* Убедитесь, что это значение достаточно для вашего видео */
+}
+
+
+.wide-anchor-link {
+    display: inline-block;
+    width: 1000px;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 60px;
+}
+
+.wide-anchor-link:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.anchor-photo{
+	width:800px;
+	height:400px;
+}
+.wide-anchor-button-container .anchor-text{
+	width:800px;
+	height:100%;
+}
